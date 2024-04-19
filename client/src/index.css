@@ -12,6 +12,12 @@
     font-family: "Poppins", sans-serif;
 }
 
+:root {
+	--primary-color: #2E1402;
+	--secondary-color: #FBEED7;
+	--tertiary-color: #B79668;
+}
+
 
 
 code {
@@ -95,6 +101,52 @@ code {
 
 .chomsky{
     font-family: 'chomsky';
+	font-weight: 100;
+}
+
+.hero-section{
+	position: relative;
+	background-image: url("../public/images/typewriter-background.svg");
+	height: 15rem;
+	width: 100%;
+	color: var(--secondary-color);
+	padding: 0 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	flex-direction: column;
+}
+
+.hero-section h1{
+	line-height: 0.9em;
+	font-size: 5em;
+	transform: translateY(-0.25em);
+}
+
+.what-is-opinionect{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.what-is-opinionect h2{
+	font-size: 4em;
+	color: var(--primary-color);
+	margin: 0.75em;
+	white-space: nowrap;
+	width: min-content;
+}
+
+.what-is-opinionect h2 > img{
+	width: 100%;
+	transform: translateY(-0.5em);
+}
+
+.empty{
+	width: 60%;
+	height: 20rem;
+	background: var(--tertiary-color);
 }
 
 .articles-heading {
@@ -207,7 +259,7 @@ body {
 
 .about-us-heading {
 	padding-left: 60px;
-	font-size: 3em;
+	font-size: 5em;
 	color: #fbeed7;
 }
 
@@ -240,18 +292,23 @@ body {
 .person-image-container img {
 	height: 70%;
 	width: 70%;
+	color: var(--primary-color);
 }
 
 .person-name {
 	font-size: 1.75em;
-	border-bottom: 1px solid #2e1402;
+	font-weight: 700;
+	white-space: nowrap;
+	border-bottom: 1px solid var(--primary-color);
 	padding-bottom: 20px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	color: var(--primary-color);
 }
 
 .person-role {
 	font-size: 1.25em;
-	font-weight: 100;
+	font-weight: 400;
 	margin-top: 10px;
+	color: var(--primary-color);
 }
