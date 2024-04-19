@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import mic from "../images/mic.png";
 
 const Navbar = () => {
 	const [userHash, setUserHash] = useState(null);
@@ -22,7 +23,7 @@ const Navbar = () => {
 			<Link to="/">
 				<img
 					className="logo"
-					src="./images/typewriter.png"
+					src={mic}
 					alt="printer"
 				></img>
 			</Link>
@@ -33,7 +34,10 @@ const Navbar = () => {
 				Read Articles
 			</Link>
 			{userHash ? (
-				<span>{userHash}</span>
+				<span className="white user-hash">
+					<i class="fa-solid fa-user"></i>
+					{userHash.slice(0, 11)}...
+				</span>
 			) : (
 				<Link
 					to="/Articles"

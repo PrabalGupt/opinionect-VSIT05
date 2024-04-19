@@ -105,7 +105,11 @@ const Article = () => {
 				<ul className="comments-list-comment-holder">
 					{commentsList.map((comment, index) => (
 						<li className="comments-list-comment" key={index}>
-							{comment}
+							<div className="user-info">
+								<i class="fa-solid fa-user"></i>
+								Username
+							</div>
+							<p>{comment}</p>
 						</li>
 					))}
 				</ul>
