@@ -17,6 +17,8 @@
 	--secondary-color: #fbeed7;
 	--tertiary-color: #94816c;
 	--quaternary-color: #dac09b;
+	--skintone-color: #DE9B72;
+	--dark-color: #3A3D3E;
 }
 
 body {
@@ -134,7 +136,8 @@ code {
 
 .hero-section {
 	position: relative;
-	background-image: url("../public/images/typewriter-background.svg");
+	background-image: url("./images/landing-hero.png");
+	background-size: cover;
 	height: 15rem;
 	width: 100%;
 	color: var(--secondary-color);
@@ -151,14 +154,14 @@ code {
 	transform: translateY(-0.25em);
 }
 
-.what-is-opinionect {
+.what-is-opinionect, .how-does-it-works {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 }
 
-.what-is-opinionect h2 {
+.what-is-opinionect h2, .how-does-it-works h2{
 	font-size: 4em;
 	color: var(--primary-color);
 	margin: 0.75em;
@@ -166,15 +169,53 @@ code {
 	width: min-content;
 }
 
-.what-is-opinionect h2 > img {
+.what-is-opinionect h2 > img, .how-does-it-works h2 > img{
 	width: 100%;
 	transform: translateY(-0.5em);
 }
 
-.empty {
+.process-steps{
+	display: flex;
+	font-size: 3em;
+	color: var(--primary-color);
+	padding: 0 7rem 3rem 7rem;
+	gap: 3rem;
+}
+
+.process-steps > i{
+	padding-top: 1rem;
+}
+
+.process-steps .step{
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	text-align: center;
+	gap: 2rem;
+	font-size: 0.35em;
+	white-space: nowrap;
+}
+
+.process-steps .step i{
+	font-size: 5em;
+}
+
+.footer-container{
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100px;
+	padding: 0 5rem;
+	margin-top: 3rem;
+}
+
+.description {
 	width: 60%;
 	height: 20rem;
-	background: var(--tertiary-color);
+	/* background: var(--tertiary-color); */
 }
 
 .articles-heading {
