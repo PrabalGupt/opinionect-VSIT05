@@ -65,19 +65,29 @@ const AllArticles = () => {
   }, [hashes]);
 
   return (
-    <div>
-      <div className="articles-heading-container">
-        <h2 className='articles-heading'>News Articles</h2>
-      </div>
-      {articles.map((content, index) => (
-        <div className='all-articles-article-container' key={index}>
-          <Link className='all-articles-article' to={`/article/${content.hash}`} state={{ articleContent: content }}>
-            {content.title}
-          </Link>
-        </div>
-      ))}
-    </div>
-  );
+		<div>
+			<div className="articles-heading-container">
+				<h2 className="articles-heading chomsky">News Articles</h2>
+			</div>
+			<div className="all-articles-container">
+				{articles.map(
+					(content, index) =>
+						content.title && (
+							<div key={index}>
+								<Link
+									className="article-link"
+									to={`/article/${content.hash}`}
+									state={{ articleContent: content }}
+								>
+									<i class="fa-solid fa-arrow-up-right-from-square"></i>
+									{content.title}
+								</Link>
+							</div>
+						)
+				)}
+			</div>
+		</div>
+	);
 };
 
 export default AllArticles;
