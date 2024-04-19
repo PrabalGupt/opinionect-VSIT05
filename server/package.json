@@ -1,0 +1,30 @@
+{
+  "name": "opinionect",
+  "version": "1.0.0",
+  "description": "Let's get your views to the world",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
+  },
+  "author": "Jaskirat Singh",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@pinata/sdk": "^2.1.0",
+    "axios": "^1.5.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.7.1",
+    "express": "^4.18.2",
+    "form-data": "^4.0.0",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "ipfs": "^0.66.1",
+    "nodemon": "^3.1.0",
+    "path": "^0.12.7",
+    "solc": "^0.8.21",
+    "web3": "^4.1.1"
+  }
+}
