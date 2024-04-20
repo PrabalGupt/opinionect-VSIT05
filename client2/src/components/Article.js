@@ -11,6 +11,7 @@ const Article = () => {
   const articleContent = location.state ? location.state.articleContent : null;
   const [comment, setComment] = useState('');
   const [commentsList, setCommentsList] = useState([]);
+  const [address, setAddress] = useState([]);
 
   const handleInputChange = (event) => {
     setComment(event.target.value);
@@ -20,7 +21,6 @@ const Article = () => {
       fetchComments();
     }
   }, [articleContent]);
-
   const fetchComments = async () => {
     try {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -30,9 +30,8 @@ const Article = () => {
       const contract = new ethers.Contract(
       config[network.chainId].OpinioNect.address, OpinioNect, signer);    
       const cleanHash = articleContent.hash.replace(/'/g, '');
+      setAddress(contract.address)
       const comments = await contract.getCommentsOnArticle(cleanHash)
-      console.log(articleContent.hash)
-      console.log(comments)
       setCommentsList(comments)
     } catch (error) {
       console.error('Error fetching comments:', error);
@@ -49,7 +48,6 @@ const Article = () => {
       config[network.chainId].OpinioNect.address, OpinioNect,signer);
       const tx = await contractInstance.addComment(articleHash, comment);
       await tx.wait();
-      console.log(tx)
       setComment('')
       fetchComments();
     } catch (error) {
@@ -109,7 +107,7 @@ const Article = () => {
 						<li className="comments-list-comment" key={index}>
 							<div className="user-info">
 								<i class="fa-solid fa-user"></i>
-								Username
+								{address}
 							</div>
 							<p>{comment}</p>
 						</li>

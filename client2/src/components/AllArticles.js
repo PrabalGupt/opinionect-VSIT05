@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import { ethers } from 'ethers';
 import OpinioNect from '../abis/OpinioNectAbi.json'
 import config from '../config.json'
+
+import store, { addArticle } from '../articlesSlice';
+
+
+
 const AllArticles = () => {
   const [hashes, setHashes] = useState([]);
   const [articles, setArticles] = useState([]);
@@ -55,6 +60,8 @@ const AllArticles = () => {
         ...prevArticles,
         { title: content.title, content: fullContent, hash },
       ]);
+
+      store.dispatch(addArticle())
     } catch (error) {
       console.error(`Error fetching article content for hash ${hash}:`, error);
     }

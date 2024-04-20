@@ -15,15 +15,12 @@ const Home = () => {
 				<h2 className="chomsky">
 					What is OpinioNect?
 					<br />
-					<img
-						src="/images/heading-decoration-border.png"
-						alt="heading-decoration-border"
-					/>
+					
+					<img src={decoration}></img>
 				</h2>
 
 
 				<div className="description">
-					<img src={decoration}></img>
 					<p>
 						Every Opinion Matters... Therefore, we bring forth
 						“OpinioNect”, a platform that presents your opinions to

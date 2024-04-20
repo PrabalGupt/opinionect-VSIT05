@@ -23,6 +23,7 @@
 
 body {
 	background-color: var(--secondary-color);
+	min-height: 100vh;
 }
 
 code {
@@ -174,6 +175,18 @@ code {
 	transform: translateY(-0.5em);
 }
 
+.what-is-opinionect{
+	margin-bottom: 0;
+}
+
+.what-is-opinionect h2 > img {
+	margin-top: 4rem;
+}
+
+.description{
+	font-size: 2em;
+}
+
 .process-steps{
 	display: flex;
 	font-size: 3em;
@@ -213,8 +226,11 @@ code {
 }
 
 .description {
-	width: 60%;
+	padding: 0 5rem;
 	height: 20rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5rem
 	/* background: var(--tertiary-color); */
 }
 
@@ -237,6 +253,7 @@ code {
 	gap: 2rem;
 	margin-top: 5rem;
 	padding: 0 5vw;
+	height: 100%;
 }
 
 .article-link {
