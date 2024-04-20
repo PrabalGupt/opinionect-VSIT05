@@ -28,9 +28,10 @@ const Home = () => {
 						and Free Speech that forms the basis of a Democracy.
 					</p>
 					<p>
-						With OpinioNect, we ensure that your invaluable opinion
-						on a topic is given equal chance of representation. In
-						that way, each topic can have a variety of views
+						With OpinioNect, we ensure that your invaluable opinion on 
+						a topic is given equal chance of representation. The comments 
+						are summarised based on the unique keywords and become tamper-proof 
+						with the support of Web3 and Blockchain.
 					</p>
 				</div>
 			</div>
