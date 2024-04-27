@@ -19,6 +19,7 @@ const AllArticles = () => {
     try {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const network = await provider.getNetwork()
+      console.log('network', network);
       console.log(provider)
       await provider.send("eth_requestAccounts", []);
       const signer = provider.getSigner();

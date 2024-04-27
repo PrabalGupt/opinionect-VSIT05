@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { ethers } from 'ethers';
-import OpinioNect from '../abis/OpinioNectAbi.json'
-import config from '../config.json'
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { ethers } from "ethers";
+import OpinioNect from "../abis/OpinioNectAbi.json";
+import config from "../config.json";
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 
+// Access your API key as an environment variable (see "Set up your API key" above)
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
+// AIzaSyBtatiAT8FHzOeo7LnuLa62j4VSEuyFhuQ
 
 const Article = () => {
   const location = useLocation();
@@ -55,20 +59,20 @@ const Article = () => {
     }
   }
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      if (!comment.trim()) {
-        alert('Please enter a non-empty comment.');
-        return;
-      }
-      const cleanHash = articleContent.hash.replace(/'/g, '');
-      const response = await addComment(cleanHash, comment)
-  } catch (error) {
-    console.error('Error posting comment:', error);
-  }
-};
-  return (
+	const handleSubmit = async (event) => {
+		event.preventDefault();
+		try {
+			if (!comment.trim()) {
+				alert("Please enter a non-empty comment.");
+				return;
+			}
+			const cleanHash = articleContent.hash.replace(/'/g, "");
+			const response = await addComment(cleanHash, comment);
+		} catch (error) {
+			console.error("Error posting comment:", error);
+		}
+	};
+	return (
 		<div className="single-article">
 			{articleContent && (
 				<>
