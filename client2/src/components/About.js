@@ -1,5 +1,5 @@
 import React from 'react'
-import prabal from '../images/prabal.png'
+import jaskirat from '../images/jaskirat.png'
 
 const About = () => {
   return (
@@ -10,9 +10,9 @@ const About = () => {
 
       <div className='person-container'>
         <div className='person-image-container'>
-          <img src={prabal}></img>
+          <img src={jaskirat}></img>
         </div>
-        <p className='person-name'>Prabal Gupta</p>
+        <p className='person-name'>Jaskirat Singh</p>
         <p className='person-role'>Full Stack Developer</p>
       </div>
     </div>

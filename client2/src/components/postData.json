@@ -1,0 +1,23 @@
+[
+    {
+      "title": "First Post",
+      "fullContent": "This is the content of the first post. It includes some interesting details about the topic.",
+      "hash": "abc123"
+    },
+    {
+      "title": "Second Post",
+      "fullContent": "Here's the second post. It dives into a deep discussion about technology and innovation.",
+      "hash": "def456"
+    },
+    {
+      "title": "Third Post",
+      "fullContent": "This post covers the topic of space exploration and the future of human missions to Mars.",
+      "hash": "ghi789"
+    },
+    {
+      "title": "Fourth Post",
+      "fullContent": "In this post, we explore the world of artificial intelligence and its impact on society.",
+      "hash": "jkl012"
+    }
+  ]
+  
