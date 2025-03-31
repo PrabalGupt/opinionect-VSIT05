@@ -84,7 +84,7 @@ const AllArticles = () => {
 							<div key={index}>
 								<Link
 									className="article-link"
-									to={`/article/${content.hash}`}
+									to={`/`}
 									state={{ articleContent: content }}
 								>
 									<i class="fa-solid fa-arrow-up-right-from-square"></i>

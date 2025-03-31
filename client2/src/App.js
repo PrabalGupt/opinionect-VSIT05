@@ -27,7 +27,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
-        <Route path="/Article/:hash" element={<Article />} />
         <Route path="/Articles" element={<Articles />} />
       </Routes>
       <Footer />
